@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f4ec" />
+    <meta
+      name="description"
+      content="Shop fresh fashion, accessories, and shoes at Alvin Apparel."
+    />
+    <title>Alvin Apparel — Find your everyday style</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="announcement">
+      <span>Fresh fits. Fair prices.</span>
+      <span class="announcement-right">Free delivery on orders over GH₵500 <span aria-hidden="true">✦</span></span>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Alvin Apparel home">
+        <span class="brand-mark">A</span>
+        <span>alvin<span class="brand-light">apparel</span></span>
+      </a>
+      <form class="search-form" id="search-form" role="search">
+        <label class="sr-only" for="search-input">Search products</label>
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="search-input" type="search" placeholder="Search clothes, shoes, accessories..." />
+        <button type="submit">Search</button>
+      </form>
+      <div class="header-actions">
+        <button class="header-link" id="account-button" type="button" aria-label="Open your profile">
+          <span class="header-icon" aria-hidden="true">♙</span>
+          <span>Profile</span>
+        </button>
+        <button class="header-link cart-trigger" id="cart-button" type="button" aria-label="Open cart">
+          <span class="header-icon" aria-hidden="true">♧</span>
+          <span>Cart</span>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <nav class="category-nav" aria-label="Shop categories">
+      <button class="category-tab active" data-category="All" type="button">Discover</button>
+      <button class="category-tab" data-category="Clothing" type="button">Clothing</button>
+      <button class="category-tab" data-category="Shoes" type="button">Shoes</button>
+      <button class="category-tab" data-category="Accessories" type="button">Accessories</button>
+      <button class="category-tab" data-category="New in" type="button">New in <span class="new-dot"></span></button>
+      <a class="category-note" href="#deals">Deals worth a look <span aria-hidden="true">↗</span></a>
+    </nav>
+
+    <main>
+      <section class="hero content-width" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-star">✳</span> YOUR STYLE, YOUR STORY</span>
+          <h1 id="hero-title">Good style.<br /><span>Good energy.</span></h1>
+          <p>Everyday pieces, standout details, and the confidence to make them yours.</p>
+          <button class="button button-dark" id="shop-collection" type="button">Shop the collection <span aria-hidden="true">↗</span></button>
+          <div class="hero-footnote"><span class="avatar-stack"><i>✦</i><i>✿</i><i>●</i></span> <span>Loved by our style community</span></div>
+        </div>
+        <div class="hero-art">
+          <img
+            src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1100&q=88"
+            alt=""
+            class="hero-image"
+            id="hero-image"
+          />
+          <div class="hero-image-overlay"></div>
+          <div class="hero-sticker"><span>STYLE<br />ON YOUR<br />TERMS</span><b>✳</b></div>
+          <div class="hero-caption"><span>THE EVERYDAY EDIT</span><span>01 / 04</span></div>
+        </div>
+        <div class="hero-side-note">MADE FOR YOUR EVERY DAY — ALVIN APPAREL</div>
+      </section>
+
+      <section class="category-pills content-width" aria-label="Browse collections">
+        <button class="category-pill" data-category="Clothing" type="button"><span class="pill-icon clothing-icon">♧</span><span>Clothing</span><span class="pill-arrow">↗</span></button>
+        <button class="category-pill" data-category="Shoes" type="button"><span class="pill-icon shoes-icon">⌁</span><span>Shoes</span><span class="pill-arrow">↗</span></button>
+        <button class="category-pill" data-category="Accessories" type="button"><span class="pill-icon accessories-icon">✳</span><span>Accessories</span><span class="pill-arrow">↗</span></button>
+        <button class="category-pill" data-category="New in" type="button"><span class="pill-icon new-icon">✦</span><span>Just landed</span><span class="pill-arrow">↗</span></button>
+      </section>
+
+      <section class="deals-section content-width" id="deals">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker"><span class="lightning">ϟ</span> THE GOOD STUFF, FOR LESS</span>
+            <h2>Quick picks <span class="heading-period">.</span></h2>
+          </div>
+          <div class="deal-timer"><span>NEW FINDS DAILY</span><b>Fresh picks, no rush</b></div>
+          <button class="text-button" id="see-deals" type="button">See all <span aria-hidden="true">→</span></button>
+        </div>
+        <div class="deal-strip" id="deal-strip"></div>
+      </section>
+
+      <section class="products-section content-width" id="products">
+        <div class="section-heading product-heading">
+          <div>
+            <span class="section-kicker">PICKED FOR YOUR NEXT LOOK</span>
+            <h2 id="product-title">A little bit of everything<span class="heading-period">.</span></h2>
+          </div>
+          <div class="sort-control">
+            <label for="sort-select">Sort by</label>
+            <select id="sort-select">
+              <option value="featured">Featured</option>
+              <option value="low">Price: low to high</option>
+              <option value="high">Price: high to low</option>
+            </select>
+          </div>
+        </div>
+        <div class="filter-row">
+          <span class="results-count" id="results-count">Handpicked for you</span>
+          <button class="filter-chip selected" data-filter="All" type="button">For you</button>
+          <button class="filter-chip" data-filter="Clothing" type="button">Clothing</button>
+          <button class="filter-chip" data-filter="Shoes" type="button">Shoes</button>
+          <button class="filter-chip" data-filter="Accessories" type="button">Accessories</button>
+        </div>
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <span>◌</span>
+          <h3>No pieces found just yet</h3>
+          <p>Try a different search or browse all of our latest finds.</p>
+          <button class="button button-dark" id="clear-search" type="button">Show everything</button>
+        </div>
+        <button class="load-more" id="load-more" type="button">You're all caught up <span aria-hidden="true">✳</span></button>
+      </section>
+
+      <section class="newsletter content-width">
+        <div class="newsletter-icon" aria-hidden="true">✳</div>
+        <div><span class="section-kicker">A LITTLE STYLE IN YOUR INBOX</span><h2>Good things look good on you.</h2><p>Get first dibs on new arrivals, offers, and outfit inspiration.</p></div>
+        <form class="newsletter-form" id="newsletter-form"><label class="sr-only" for="email-input">Email address</label><input id="email-input" type="email" placeholder="Your email address" required /><button type="submit" aria-label="Subscribe">Join us <span aria-hidden="true">→</span></button></form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#"><span class="brand-mark">A</span><span>alvin<span class="brand-light">apparel</span></span></a>
+      <span>Wear what feels like you.</span>
+      <span>© 2026 Alvin Apparel</span>
+    </footer>
+
+    <nav class="mobile-nav" aria-label="Main navigation">
+      <button class="mobile-nav-item active" data-mobile="home" type="button"><span>⌂</span>Home</button>
+      <button class="mobile-nav-item" data-mobile="categories" type="button"><span>▦</span>Categories</button>
+      <button class="mobile-nav-item" data-mobile="profile" type="button"><span>♙</span>You</button>
+      <button class="mobile-nav-item mobile-cart" data-mobile="cart" type="button"><span>♧<i id="mobile-cart-count">0</i></span>Cart</button>
+    </nav>
+
+    <button class="chat-launcher" id="chat-launcher" type="button" aria-label="Open chat"><span aria-hidden="true">✳</span><span class="chat-label">Need a hand?</span></button>
+    <section class="chat-panel" id="chat-panel" aria-label="Chat with Alvin Apparel" hidden>
+      <div class="chat-header"><div><span class="chat-avatar">A</span><span><b>Alvin style team</b><small>We’re here to help</small></span></div><button id="close-chat" type="button" aria-label="Close chat">×</button></div>
+      <div class="chat-messages" id="chat-messages"><p class="chat-bubble">Hey there! 👋 Looking for something in particular?</p></div>
+      <form class="chat-form" id="chat-form"><label class="sr-only" for="chat-input">Write a message</label><input id="chat-input" placeholder="Write a message..." required /><button type="submit" aria-label="Send message">↑</button></form>
+    </section>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <div class="modal-backdrop" id="modal-backdrop" hidden>
+      <section class="cart-drawer" id="cart-drawer" aria-labelledby="cart-title" aria-modal="true" role="dialog">
+        <div class="drawer-header"><div><span class="section-kicker">YOUR FINDS</span><h2 id="cart-title">Your cart <span class="heading-period">.</span></h2></div><button class="close-button" id="close-cart" type="button" aria-label="Close cart">×</button></div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-empty" id="cart-empty"><span>♧</span><h3>Your cart is taking a little break</h3><p>Go find something that feels like you.</p><button class="button button-dark" id="keep-shopping" type="button">Keep browsing</button></div>
+        <div class="cart-summary" id="cart-summary" hidden>
+          <div class="summary-row"><span>Subtotal</span><b id="cart-subtotal">GH₵0.00</b></div>
+          <p>Delivery and final total confirmed at checkout.</p>
+          <button class="button button-dark checkout-button" id="checkout-button" type="button">Continue to payment <span>→</span></button>
+        </div>
+      </section>
+    </div>
+
+    <div class="modal-backdrop payment-backdrop" id="payment-backdrop" hidden>
+      <section class="payment-modal" aria-labelledby="payment-title" aria-modal="true" role="dialog">
+        <div class="drawer-header"><div><span class="section-kicker">SECURE CHECKOUT</span><h2 id="payment-title">MTN Mobile Money<span class="heading-period">.</span></h2></div><button class="close-button" id="close-payment" type="button" aria-label="Close payment">×</button></div>
+        <p class="payment-intro">Enter your MTN MoMo number. We’ll send a payment request to your phone for approval.</p>
+        <form class="payment-form" id="payment-form">
+          <label for="momo-number">Mobile Money number</label>
+          <div class="phone-field"><span>🇬🇭 +233</span><input id="momo-number" inputmode="numeric" autocomplete="tel-national" value="539189466" required pattern="[0-9]{9}" maxlength="9" /></div>
+          <small>Enter the 9 digits after +233. Your payment is securely processed by MTN Mobile Money.</small>
+          <div class="payment-total"><span>Order total</span><b id="payment-total">GH₵0.00</b></div>
+          <button class="button button-dark payment-button" type="submit">Pay with Mobile Money <span>→</span></button>
+          <p class="payment-error" id="payment-error" role="alert" hidden></p>
+        </form>
+        <div class="payment-confirmation" id="payment-confirmation" hidden role="status">
+          <span class="confirmation-icon" id="confirmation-icon">…</span><h3 id="confirmation-title">Request sent to your phone</h3>
+          <p id="confirmation-message">Approve the payment request on your MTN MoMo phone.</p>
+          <div class="payment-confirmation-total"><span>Order total</span><b id="confirmation-total">GH₵0.00</b></div>
+          <p class="payment-status" id="payment-status" aria-live="polite">Waiting for your approval…</p>
+          <button class="button button-dark" id="done-payment" type="button">Done</button>
+        </div>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
